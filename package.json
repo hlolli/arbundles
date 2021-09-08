@@ -15,13 +15,11 @@
   "scripts": {
     "start": "node build/src/index.js",
     "clean": "rimraf coverage build tmp",
-    "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepublish": "tsc",
     "build:push": "tsc && git add lib && git commit -m \"Build and push new version\" && git push"
   },
   "devDependencies": {
